@@ -3,11 +3,63 @@
 (@cardAnimator.done)="resetAnimationState($event)"
 (swipeleft)='startAnimation("swipeleft")'
 (swiperight)='startAnimation("swiperight")'>
-<img src="{{cards[index].icon}}" class="card-img-top">
+<!--img src="{{cards[index].icon}}" class="card-img-top">
 <div class="content">
   <div class="card-body">
     <h5 class="card-title">{{cards[index].question}}</h5>
     <p class="card-text">{{cards[index].description}}</p>
   </div>
+</div-->
+
+
+<div class="card text-center" style="height: 100%;">
+  <div class="card-header">
+    ...info...
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{cards[index].question}}</h5>
+    <p class="card-text">{{cards[index].description}}</p>
+    <a href="#" class="btn btn-primary">Ver más</a>
+  </div>
+
+<!-- resultados -->
+<div class="card-group">
+  <div class="card border-danger">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-danger">En Contra</h5>
+      <p class="card-text text-danger">Nº actualizado de votos.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">ultimo voto hace 45 minutos.</small>
+    </div>
+  </div>
+  <div class="card border-secundary">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-secundary">Abstencion</h5>
+      <p class="card-text text-secundary">Nº actualizado de votos.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">ultimo voto hace 5 horas.</small>
+    </div>
+  </div>
+  <div class="card border-success">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title text-success">A Favor</h5>
+      <p class="card-text text-success">Nº actualizado de votos.</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">ultimo voto hace 3 minutos.</small>
+    </div>
+  </div>
 </div>
+<!-- Fin Resultados -->
+
+  <div class="card-footer text-muted">
+    fecha inicio
+  </div>
+</div>
+
 </div>

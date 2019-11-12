@@ -16,14 +16,14 @@ export class ConfigService {
   }
 
   listQuestion() {
-    return this.http.get(this.HOST_URL+'pub/question');
+    return this.http.get<Card[]>(this.HOST_URL+'pub/question');
   }
 
   agreeAnswer(id: string) {
-    return this.http.get(this.HOST_URL+'answer/ok/'+id);
+    return this.http.get(this.HOST_URL+'pub/answer/ok/'+id);
   }
 
   disagreeAnswer(id: string) {
-    return this.http.get(this.HOST_URL+'answer/no/'+id);
+    return this.http.get(this.HOST_URL+'pub/answer/no/'+id);
   }
 }
