@@ -25,6 +25,7 @@ export class AnswerComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.qid);
     this.groupAnswer(this.qid);
   }
 

@@ -21,7 +21,7 @@ export class ConfigService {
   }
 
   listAnswer(id: string) {
-    return this.http.get<Answer>(this.HOST_URL+'pub/answer/group/'+id);
+    return this.http.get<Answer[]>(this.HOST_URL+'pub/answer/group/'+id);
   }
 
   agreeAnswer(id: string) {
