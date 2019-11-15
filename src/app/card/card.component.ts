@@ -24,6 +24,7 @@ export class CardComponent implements OnInit {
   @Input()
   parentSubject: Subject<any>;
   animationState: string;
+  isActive: boolean;
 
   constructor(private configService: ConfigService) { }
 
@@ -34,6 +35,7 @@ export class CardComponent implements OnInit {
   }
 
   startAnimation(state) {
+    this.isActive = null;
     if (!this.animationState) {
       this.animationState = state;
     }
@@ -48,6 +50,7 @@ export class CardComponent implements OnInit {
   resetAnimationState(state) {
     this.animationState = '';
     this.index++;
+    this.isActive = true;
   }
 
 

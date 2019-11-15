@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Card } from './../model/card';
 import { List } from './../model/list';
+import { Answer } from './../model/answer';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +18,10 @@ export class ConfigService {
 
   listQuestion() {
     return this.http.get<Card[]>(this.HOST_URL+'pub/question');
+  }
+
+  listAnswer(id: string) {
+    return this.http.get<Answer>(this.HOST_URL+'pub/answer/group/'+id);
   }
 
   agreeAnswer(id: string) {

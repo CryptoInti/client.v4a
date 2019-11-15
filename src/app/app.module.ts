@@ -12,6 +12,7 @@ import { GameComponent } from './game/game.component';
 import { CardComponent } from './card/card.component';
 import { ListComponent } from './list/list.component';
 import { CapsComponent } from './caps/caps.component';
+import { AnswerComponent } from './answer/answer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CapsComponent } from './caps/caps.component';
     GameComponent,
     CardComponent,
     ListComponent,
-    CapsComponent
+    CapsComponent,
+    AnswerComponent
   ],
   imports: [
     BrowserModule,
