@@ -45,11 +45,12 @@ export class CardComponent implements OnInit {
     if (this.animationState=="swipeleft") {
       this.voteNo(this.cards[this.index]._id);
     }
+    this.index++;
   }
 
   resetAnimationState(state) {
     this.animationState = '';
-    this.index++;
+    //this.index++;
     this.isActive = true;
   }
 

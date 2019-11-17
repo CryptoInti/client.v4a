@@ -19,7 +19,7 @@ export class AnswerComponent implements OnInit {
   constructor(private configService: ConfigService) {
     this.answerOk = 0;
     this.answerNo = 0;
-    this.answerNull = 22;
+    this.answerNull = 0;
     this.myAnswer = true;
 
   }
@@ -35,6 +35,10 @@ export class AnswerComponent implements OnInit {
         if (resp[i].answer == true) {
           this.answerOk = this.answerOk+1;
         }
+        if (resp[i].answer == false) {
+          this.answerNo = this.answerNo+1;
+        }
+
       }
     });
   }
